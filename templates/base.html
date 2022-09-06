@@ -12,7 +12,12 @@
     <title>Hello, pybo!</title>
 </head>
 <body>
+<!-- nav-bar -->
+{% include "navbar.html" %}
+<!-- insert content -->
 {% block content %}
 {% endblock %}
+<!-- Bootstrap JS -->
+<script src="{% static 'bootstrap.min.js' %}"></script>
 </body>
 </html>
