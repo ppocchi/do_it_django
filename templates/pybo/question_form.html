@@ -6,16 +6,7 @@
     <form method="post" class="post-form my-3">
         {% csrf_token %}
         <!-- 오류 표시 -->
-        {% if form.errors %}
-            <div class="alert alert-danger" role="alert">
-            {% for field in form %}
-                {% if field.errors %}
-                <strong>{{ field.label }}</strong>
-                {{ field.errors }}
-                {% endif %}
-            {% endfor %}
-            </div>
-        {% endif %}
+        {% include "form_errors.html" %}
         <!-- 제목, 내용 form-->
         <div class="mb-3">
             <label for="subject">제목</label>
